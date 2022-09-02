@@ -97,29 +97,6 @@ export class Config {
 }
 ```
 
-### Multiple config class
-
-Can define multiple config class:
-
-```dosini
-AWS_SECRET_KEY="secret key"
-S3_BUCKET="bucket name"
-```
-
-```typescript
-@Env()
-export class AWSConfig {
-  @Key()
-  static AWS_SECRET_KEY: string; // String("secret key")
-}
-
-@Env()
-export class S3Config {
-  @Key()
-  static S3_BUCKET: string; // String("bucket name")
-}
-```
-
 ### Type-Safe
 
 Since the provided `.env` does not contain all the variables defined in config class, an exception is thrown:
@@ -189,6 +166,29 @@ development.env  stagging.env  production.env
 @Env({ path: 'development.env' })
 export class Config {
   ...
+}
+```
+
+### Multiple config class
+
+Can define multiple config class:
+
+```dosini
+AWS_SECRET_KEY="secret key"
+S3_BUCKET="bucket name"
+```
+
+```typescript
+@Env({ allowNotExistInClass: true })
+export class AWSConfig {
+  @Key()
+  static AWS_SECRET_KEY: string; // String("secret key")
+}
+
+@Env({ allowNotExistInClass: true })
+export class S3Config {
+  @Key()
+  static S3_BUCKET: string; // String("bucket name")
 }
 ```
 
