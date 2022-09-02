@@ -149,6 +149,8 @@ $ node dist/index.js
 ERROR: DATABASE_HOST is not defined in env file.
 ```
 
+> allowNotExistInEnv default is `false`
+
 ### Find un using key in `.env`
 
 Can find un using key in `.env`:
@@ -169,8 +171,10 @@ export class Config {
 ```sh
 $ node dist/index.js
 
-Error: DATABASE_PORT is not defined in env class.
+ERROR: DATABASE_PORT is not defined in env class.
 ```
+
+> allowNotExistInClass default is `false`
 
 ### Change `.env` path
 
