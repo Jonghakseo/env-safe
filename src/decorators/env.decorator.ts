@@ -44,18 +44,18 @@ export function Env(options: EnvOptions = {}): ClassDecorator {
           envClass[key.name] = key.type(key.default);
         } else {
           if (!options.allowNotExistInEnv) return;
-          killServer(`${key.name} is not defined in env file.`);
+          killServer(`"${key.name}" is not defined in env file.`);
         }
       }
       if (key.type === Number && isNaN(envClass[key.name])) {
-        killServer(`${key.name} is NaN.`);
+        killServer(`"${key.name}" is NaN.`);
       }
     });
 
     if (!options.allowNotExistInClass) {
       for (const index in output) {
         if (envClass[index] === undefined) {
-          killServer(`${index} is not defined in env class.`);
+          killServer(`"${index}" is not defined in env class.`);
         }
       }
     }
