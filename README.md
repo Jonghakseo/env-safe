@@ -151,7 +151,7 @@ ERROR: DATABASE_HOST is not defined in env file.
 
 ### Find un using key in `.env`
 
-If turn on noUnusedKey. Can find un using key in `.env`:
+Can find un using key in `.env`:
 
 ```dosini
 DATABASE_HOST="localhost"
@@ -159,7 +159,7 @@ DATABASE_PORT=3306
 ```
 
 ```typescript
-@Env({ allowNotExistInClass: true })
+@Env({ allowNotExistInClass: false })
 export class Config {
   @Key()
   static DATABASE_HOST: string;
