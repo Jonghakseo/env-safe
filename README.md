@@ -155,7 +155,6 @@ Can find un using key in `.env`:
 
 ```dosini
 DATABASE_HOST="localhost"
-DATABASE_PORT=3306
 ```
 
 ```typescript
@@ -163,6 +162,9 @@ DATABASE_PORT=3306
 export class Config {
   @Key()
   static DATABASE_HOST: string;
+
+  @Key()
+  static DATABASE_PORT: number;
 }
 ```
 
