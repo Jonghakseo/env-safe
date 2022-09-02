@@ -9,8 +9,7 @@
     "lint": "eslint \"src/**/**.ts\"",
     "start:dev": "nodemon src/index.ts",
     "test": "jest",
-    "test:coverage": "jest --coverage",
-    "publish:npm": "bash .github/scripts/publish.sh"
+    "test:coverage": "jest --coverage"
   },
   "repository": {
     "type": "git",
