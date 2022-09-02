@@ -31,7 +31,7 @@
   },
   "homepage": "https://github.com/creatrip/env-safe",
   "devDependencies": {
-    "@types/ini": "1.3.31",
+    "@types/dotenv": "8.2.0",
     "@types/jest": "27.5.0",
     "@typescript-eslint/eslint-plugin": "5.32.0",
     "@typescript-eslint/parser": "5.32.0",
@@ -61,7 +61,7 @@
     "testEnvironment": "node"
   },
   "dependencies": {
-    "ini": "3.0.0",
+    "dotenv": "16.0.2",
     "reflect-metadata": "0.1.13"
   }
 }
