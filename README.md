@@ -7,7 +7,6 @@
 [![NPM version](https://img.shields.io/npm/v/env-safe.svg)](https://www.npmjs.com/package/env-safe)
 <img alt="NPM Download" src="https://img.shields.io/npm/dw/env-safe">
 <img alt="GitHub contributors" src="https://img.shields.io/github/contributors/creatrip/env-safe">
-<img alt="GitHub" src="https://img.shields.io/github/license/creatrip/env-safe">
 
 **env-safe** is module that loads that loads environment variables from a `.env` file into [`process.env`](https://nodejs.org/docs/latest/api/process.html#process_process_env) with type-safe. And can also validate the type of [`process.env`](https://nodejs.org/docs/latest/api/process.html#process_process_env). **env-safe** is dependent on [ini](https://www.npmjs.com/package/ini) and [reflect-metadata](https://www.npmjs.com/package/reflect-metadata).
 
