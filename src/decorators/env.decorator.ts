@@ -43,7 +43,7 @@ export function Env(options: EnvOptions = {}): ClassDecorator {
         if (key.default !== undefined) {
           envClass[key.name] = key.type(key.default);
         } else {
-          if (!options.allowNotExistInEnv) return;
+          if (options.allowNotExistInEnv) return;
           killServer(`"${key.name}" is not defined in env file.`);
         }
       }
