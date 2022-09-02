@@ -209,3 +209,7 @@ export class Config {
   ...
 }
 ```
+
+## Contributing Guide
+
+See [CONTRIBUTING.md](https://github.com/creatrip/env-safe/blob/main/CONTRIBUTING.md)
