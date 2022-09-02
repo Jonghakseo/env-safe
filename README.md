@@ -146,7 +146,7 @@ export class Config {
 ```sh
 $ node dist/index.js
 
-ERROR: DATABASE_HOST is not defined in env file.
+ERROR: DATABASE_USER is not defined in env file.
 ```
 
 > allowNotExistInEnv default is `false`
