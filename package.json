@@ -1,0 +1,67 @@
+{
+  "name": "env-safe",
+  "version": "0.0.1",
+  "description": "🔑 Loads environment variables from .env for nodejs projects with safe",
+  "main": "index.js",
+  "types": "index.d.js",
+  "scripts": {
+    "build": "tsc",
+    "lint": "eslint \"src/**/**.ts\"",
+    "start:dev": "nodemon src/index.ts",
+    "test": "jest",
+    "test:coverage": "jest --coverage"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/creatrip/env-safe"
+  },
+  "author": "creatrip",
+  "keywords": [
+    "environment",
+    "env",
+    "ini",
+    "config",
+    "nodejs",
+    "typescript",
+    "ts",
+    "reflection"
+  ],
+  "bugs": {
+    "url": "https://github.com/creatrip/env-safe/issues"
+  },
+  "homepage": "https://github.com/creatrip/env-safe",
+  "devDependencies": {
+    "@types/dotenv": "8.2.0",
+    "@types/jest": "27.5.0",
+    "@typescript-eslint/eslint-plugin": "5.32.0",
+    "@typescript-eslint/parser": "5.32.0",
+    "eslint": "8.21.0",
+    "eslint-config-prettier": "8.5.0",
+    "eslint-plugin-prettier": "4.2.1",
+    "eslint-plugin-unused-imports": "2.0.0",
+    "jest": "27.5.1",
+    "nodemon": "2.0.16",
+    "prettier": "2.7.1",
+    "ts-jest": "27.1.4",
+    "ts-node": "10.7.0",
+    "typescript": "4.7.4"
+  },
+  "jest": {
+    "moduleFileExtensions": [
+      "js",
+      "json",
+      "ts"
+    ],
+    "rootDir": "./",
+    "testRegex": "\\.spec.ts$",
+    "transform": {
+      ".+\\.ts$": "ts-jest"
+    },
+    "coverageDirectory": "coverage",
+    "testEnvironment": "node"
+  },
+  "dependencies": {
+    "dotenv": "16.0.2",
+    "reflect-metadata": "0.1.13"
+  }
+}
