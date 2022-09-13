@@ -113,7 +113,7 @@ export class Config {
   static DATABASE_HOST: string; // Not defined Error
 
   @Key()
-  static DATABASE_POST: number; // NaN Error
+  static DATABASE_PORT: number; // NaN Error
 
   @Key()
   static DATABASE_USER: string; // Not defined Error

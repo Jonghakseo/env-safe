@@ -24,15 +24,15 @@ export function Env(options: EnvOptions = {}): ClassDecorator {
       const data: string | undefined = output[key.name];
       envClass[key.name] = key.type === Boolean ? data === 'true' : key.type(data);
       if (output[key.name] === undefined || envClass[key.name] === undefined) {
-        if (key.default !== undefined) envClass[key.name] = key.type(key.default);
+        if (key.default !== undefined) {
+          envClass[key.name] = key.type(key.default);
+        } else {
+          killServer(`"${key.name}" is not defined in .env`);
+        }
       }
       if (key.type === Number && isNaN(envClass[key.name])) {
         killServer(`"${key.name}" is NaN.`);
       }
     });
-
-    for (const index in output) {
-      if (envClass[index] === undefined) killServer(`"${index}" is not defined in env class.`);
-    }
   };
 }
