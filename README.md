@@ -152,13 +152,13 @@ S3_BUCKET="bucket name"
 ```
 
 ```typescript
-@Env({ allowNotExistInClass: true })
+@Env()
 export class AWSConfig {
   @Key()
   static AWS_SECRET_KEY: string; // String("secret key")
 }
 
-@Env({ allowNotExistInClass: true })
+@Env()
 export class S3Config {
   @Key()
   static S3_BUCKET: string; // String("bucket name")
