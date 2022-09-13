@@ -123,10 +123,8 @@ export class Config {
 ```sh
 $ node dist/index.js
 
-ERROR: DATABASE_USER is not defined in env file.
+ERROR: DATABASE_USER is not defined in .env
 ```
-
-> allowNotExistInEnv default is `false`
 
 ### Change `.env` path
 
