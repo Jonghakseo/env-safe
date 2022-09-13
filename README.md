@@ -107,7 +107,7 @@ DATABASE_PORT="wrong data"
 ```
 
 ```typescript
-@Env({ allowNotExistInEnv: false })
+@Env()
 export class Config {
   @Key()
   static DATABASE_HOST: string; // Not defined Error
@@ -127,31 +127,6 @@ ERROR: DATABASE_USER is not defined in env file.
 ```
 
 > allowNotExistInEnv default is `false`
-
-### Find un using key in `.env`
-
-Can find un using key in `.env`:
-
-```dosini
-DATABASE_HOST="localhost"
-DATABASE_PORT=3306
-```
-
-```typescript
-@Env({ allowNotExistInClass: false })
-export class Config {
-  @Key()
-  static DATABASE_HOST: string;
-}
-```
-
-```sh
-$ node dist/index.js
-
-ERROR: DATABASE_PORT is not defined in env class.
-```
-
-> allowNotExistInClass default is `false`
 
 ### Change `.env` path
 
