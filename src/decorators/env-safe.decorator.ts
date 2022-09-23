@@ -3,7 +3,7 @@ import { EnvStorage, Key } from '../storages/env.storage';
 import { setDefaultValues } from '../utils/set-default-values.util';
 import { killServer } from '../utils/kill-server.util';
 
-export type EnvOptions = {
+export type EnvSafeOptions = {
   /**
    * Input your `.env` file path
    * @default '.env'
@@ -11,7 +11,7 @@ export type EnvOptions = {
   path?: string;
 };
 
-export function Env(options: EnvOptions = {}): ClassDecorator {
+export function EnvSafe(options: EnvSafeOptions = {}): ClassDecorator {
   setDefaultValues(options, { path: '.env' });
 
   return (envClass: any): void => {

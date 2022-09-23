@@ -1,50 +1,50 @@
-import { Key, Env } from '../index';
+import { EnvSafe, EnvKey } from '../index';
 
-@Env()
+@EnvSafe()
 class ENV1 {
-  @Key()
+  @EnvKey()
   static DATABASE_USER: string;
 
-  @Key()
+  @EnvKey()
   static DATABASE_PORT: number;
 
-  @Key()
+  @EnvKey()
   static DATABASE_SYNC: boolean;
 }
 
-@Env({ path: 'src/tests/env/redis.env' })
+@EnvSafe({ path: 'src/tests/env/redis.env' })
 class ENV2 {
-  @Key()
+  @EnvKey()
   static DATABASE_USER: string;
 
-  @Key()
+  @EnvKey()
   static DATABASE_PORT: number;
 
-  @Key()
+  @EnvKey()
   static DATABASE_SYNC: boolean;
 
-  @Key()
+  @EnvKey()
   static DATABASE_DROP: boolean;
 }
 
-@Env()
+@EnvSafe()
 class ENV3 {
-  @Key()
+  @EnvKey()
   static DATABASE_USER: string;
 
-  @Key()
+  @EnvKey()
   static DATABASE_PORT: number;
 
-  @Key()
+  @EnvKey()
   static DATABASE_SYNC: boolean;
 
-  @Key({ default: 'howdy' })
+  @EnvKey({ default: 'howdy' })
   static RELEASE: string;
 
-  @Key({ default: 2022 })
+  @EnvKey({ default: 2022 })
   static VERSION: number;
 
-  @Key({ default: true })
+  @EnvKey({ default: true })
   static CONFIRM: boolean;
 }
 

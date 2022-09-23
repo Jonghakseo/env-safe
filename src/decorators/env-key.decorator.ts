@@ -2,7 +2,7 @@ import 'reflect-metadata';
 import { EnvStorage } from '../storages/env.storage';
 import { setDefaultValues } from '../utils/set-default-values.util';
 
-export type KeyOptions = {
+export type EnvKeyOptions = {
   /**
    * Default value
    * @default undefined
@@ -16,7 +16,7 @@ export type KeyOptions = {
   description?: string;
 };
 
-export function Key(options: KeyOptions = {}): PropertyDecorator {
+export function EnvKey(options: EnvKeyOptions = {}): PropertyDecorator {
   setDefaultValues(options, {
     default: undefined,
     description: undefined,

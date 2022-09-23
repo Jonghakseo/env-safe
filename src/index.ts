@@ -1,2 +1,2 @@
-export { EnvOptions, Env } from './decorators/env.decorator';
-export { KeyOptions, Key } from './decorators/key.decorator';
+export { EnvSafeOptions, EnvSafe } from './decorators/env-safe.decorator';
+export { EnvKeyOptions, EnvKey } from './decorators/env-key.decorator';
