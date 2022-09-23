@@ -1,4 +1,4 @@
-<h1><a href="https://www.npmjs.com/package/env-safe">CONTRIBUTING GUIDE</a></h1>
+<h1>CONTRIBUTING GUIDE</h1>
 
 1. [Fork!](https://help.github.com/articles/fork-a-repo/)
 2. Install dependencies (`npm install`)
