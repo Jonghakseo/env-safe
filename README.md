@@ -9,7 +9,7 @@
 <img alt="NPM Download" src="https://img.shields.io/npm/dw/@creatrip/env-safe">
 <img alt="GitHub contributors" src="https://img.shields.io/github/contributors/creatrip/env-safe">
 
-**env-safe** is module that loads that loads environment variables from a `.env` file into [`process.env`](https://nodejs.org/docs/latest/api/process.html#process_process_env) with type-safe. And can also validate the type of [`process.env`](https://nodejs.org/docs/latest/api/process.html#process_process_env). **env-safe** is dependent on [dotenv](https://www.npmjs.com/package/dotenv) and [reflect-metadata](https://www.npmjs.com/package/reflect-metadata).
+**env-safe** is module that loads environment variables from a `.env` file into [`process.env`](https://nodejs.org/docs/latest/api/process.html#process_process_env) with type-safe. And can also validate the type of [`process.env`](https://nodejs.org/docs/latest/api/process.html#process_process_env). **env-safe** is dependent on [dotenv](https://www.npmjs.com/package/dotenv) and [reflect-metadata](https://www.npmjs.com/package/reflect-metadata).
 
 <!-- Introduce -->
 
