@@ -108,7 +108,7 @@ Set nullable to env config class property:
 @EnvSafe()
 export class Env {
   @EnvKey({ nullable: true })
-  static DATABASE_HOST: number | null; // Number or null
+  static DATABASE_HOST: string | null; // String or null
 }
 ```
 
