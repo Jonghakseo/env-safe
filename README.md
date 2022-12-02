@@ -1,6 +1,6 @@
-<h1><a href="https://www.npmjs.com/package/@creatrip/env-safe">env-safe</a></h1>
-
 <img src="https://avatars.githubusercontent.com/u/21240036?s=200&v=4" alt="env-safe" align="right" width="110" />
+
+<h1><a href="https://www.npmjs.com/package/@creatrip/env-safe">env-safe</a></h1>
 
 <!-- Badges -->
 
@@ -100,6 +100,18 @@ export class Env {
 }
 ```
 
+### Nullable
+
+Set nullable to env config class property:
+
+```typescript
+@EnvSafe()
+export class Env {
+  @EnvKey({ nullable: true })
+  static DATABASE_HOST: number | null; // Number or null
+}
+```
+
 ### Type-Safe
 
 Since the provided `.env` does not contain all the variables defined in env config class, an exception is thrown:
@@ -126,7 +138,7 @@ export class Env {
 ```sh
 $ node dist/index.js
 
-ERROR: DATABASE_USER is not defined in .env
+ERROR: .env - DATABASE_USER is not defined
 ```
 
 ### Change `.env` path
