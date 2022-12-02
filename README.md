@@ -182,6 +182,12 @@ export class EnvS3 {
 }
 ```
 
+### Auto generate template .env
+
+If you don't make .env, automatically generate .env with template:
+
+https://user-images.githubusercontent.com/25793226/205256885-1ba27e5d-ec98-4c9a-95be-418a81c28138.mov
+
 ## Contributing Guide
 
 See [CONTRIBUTING.md](https://github.com/creatrip/env-safe/blob/main/CONTRIBUTING.md)
