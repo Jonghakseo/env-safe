@@ -138,6 +138,8 @@ export class Env {
 ```sh
 $ node dist/index.js
 
+ERROR: .env - DATABASE_HOST is not defined
+ERROR: .env - DATABASE_PORT is not allowed
 ERROR: .env - DATABASE_USER is not defined
 ```
 
