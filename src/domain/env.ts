@@ -40,9 +40,8 @@ export class Env {
         }
         continue;
       }
-      const castedValue: any =
-        key.type === Boolean ? String(originalValue) === 'true' : key.type(originalValue);
-      if (castedValue === undefined || (key.type === Number && isNaN(castedValue))) {
+      const castedValue: any = this.castingValue(originalValue, key);
+      if (castedValue === undefined) {
         // type casting error
         errorMessages.push(`ERROR: ${this.path} - "${key.name}" is not allowed`);
         continue;
@@ -59,5 +58,23 @@ export class Env {
       userEnvClass[key] = this.data.get(key);
     }
     return this;
+  }
+
+  private castingValue(value: any, key: Key): any {
+    value = String(value);
+    switch (key.type) {
+      case Boolean:
+        if (value === 'true') return true;
+        else if (value === 'false') return false;
+        else return undefined;
+
+      case Number:
+        const castedValue: number = key.type(value);
+        if (isNaN(castedValue)) return undefined;
+        else return castedValue;
+
+      default:
+        return key.type(value);
+    }
   }
 }
