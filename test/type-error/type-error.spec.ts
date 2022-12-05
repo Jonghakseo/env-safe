@@ -4,7 +4,7 @@ import { EnvKey, EnvSafe } from '../../src';
 jest.mock('../../src/adapter/process');
 
 describe('type-error', () => {
-  test('[Success]', async () => {
+  test('[Fail]', async () => {
     // Given
 
     // When
